@@ -1,0 +1,2496 @@
+{
+ "elf": {
+  "path": "C:/Users/Atomiz/WorkBuddy/2026-11-06-00-02-57/samples/demo.elf",
+  "arch": "ARM",
+  "bits": 32,
+  "endian": "little",
+  "elf_type": "ET_EXEC",
+  "dwarf_version": 4,
+  "cu_count": 1,
+  "sections": [
+   {
+    "name": ".text",
+    "address": 134217728,
+    "size": 40
+   },
+   {
+    "name": ".ARM.exidx",
+    "address": 134217768,
+    "size": 16
+   },
+   {
+    "name": ".data",
+    "address": 536870912,
+    "size": 8
+   },
+   {
+    "name": ".bss",
+    "address": 536870920,
+    "size": 178
+   }
+  ],
+  "warnings": []
+ },
+ "variable_count": 8,
+ "variables": [
+  {
+   "name": "g_version",
+   "type": "const uint32_t",
+   "address": 134217764,
+   "size": 4,
+   "section": ".text",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_version",
+    "type": "const uint32_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 134217764,
+    "size": 4,
+    "bit_offset": null,
+    "bit_size": null,
+    "extra": {
+     "canonical_type": "const uint32_t",
+     "typedef_chain": "uint32_t",
+     "qualifiers": "const",
+     "decl_line": 61
+    }
+   }
+  },
+  {
+   "name": "g_mode",
+   "type": "work_mode_t",
+   "address": 536870912,
+   "size": 4,
+   "section": ".data",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_mode",
+    "type": "work_mode_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536870912,
+    "size": 4,
+    "bit_offset": null,
+    "bit_size": null,
+    "extra": {
+     "enum_values": [
+      [
+       "MODE_IDLE",
+       0
+      ],
+      [
+       "MODE_RUN",
+       1
+      ],
+      [
+       "MODE_FAULT",
+       255
+      ]
+     ],
+     "canonical_type": "work_mode_t",
+     "typedef_chain": "work_mode_t",
+     "decl_line": 60
+    }
+   }
+  },
+  {
+   "name": "local_static",
+   "type": "uint32_t",
+   "address": 536870916,
+   "size": 4,
+   "section": ".data",
+   "linkage": "local-static",
+   "scope": "main",
+   "tree": {
+    "name": "local_static",
+    "type": "uint32_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536870916,
+    "size": 4,
+    "bit_offset": null,
+    "bit_size": null,
+    "extra": {
+     "canonical_type": "uint32_t",
+     "typedef_chain": "uint32_t",
+     "decl_line": 67
+    }
+   }
+  },
+  {
+   "name": "g_uart1",
+   "type": "uart_handle_t",
+   "address": 536870920,
+   "size": 52,
+   "section": ".bss",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_uart1",
+    "type": "uart_handle_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536870920,
+    "size": 52,
+    "bit_offset": null,
+    "bit_size": null,
+    "children": [
+     {
+      "name": "CR1",
+      "type": "vu32",
+      "kind": "base",
+      "offset": 0,
+      "address": 536870920,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "decl_line": 46
+      }
+     },
+     {
+      "name": "CR1_BITS",
+      "type": "uart_ctrl_bits_t",
+      "kind": "struct",
+      "offset": 4,
+      "address": 536870924,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "enable",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870924,
+        "size": 4,
+        "bit_offset": 0,
+        "bit_size": 1,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967392,
+         "decl_line": 20
+        }
+       },
+       {
+        "name": "irq_priority",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870924,
+        "size": 4,
+        "bit_offset": 1,
+        "bit_size": 3,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967393,
+         "decl_line": 21
+        }
+       },
+       {
+        "name": "dma_en",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870924,
+        "size": 4,
+        "bit_offset": 4,
+        "bit_size": 1,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967396,
+         "decl_line": 22
+        }
+       },
+       {
+        "name": "reserved",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870924,
+        "size": 4,
+        "bit_offset": 5,
+        "bit_size": 11,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967397,
+         "decl_line": 23
+        }
+       },
+       {
+        "name": "baud_prescaler",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870924,
+        "size": 4,
+        "bit_offset": 16,
+        "bit_size": 16,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967408,
+         "decl_line": 24
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 47
+      }
+     },
+     {
+      "name": "SR",
+      "type": "uart_status_u",
+      "kind": "union",
+      "offset": 8,
+      "address": 536870928,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "all",
+        "type": "uint32_t",
+        "kind": "base",
+        "offset": 0,
+        "address": 536870928,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "decl_line": 29
+        }
+       },
+       {
+        "name": "bits",
+        "type": "<anonymous struct>",
+        "kind": "struct",
+        "offset": 0,
+        "address": 536870928,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "tx_empty",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870928,
+          "size": 4,
+          "bit_offset": 0,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967424,
+           "decl_line": 31
+          }
+         },
+         {
+          "name": "rx_full",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870928,
+          "size": 4,
+          "bit_offset": 1,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967425,
+           "decl_line": 32
+          }
+         },
+         {
+          "name": "parity_err",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870928,
+          "size": 4,
+          "bit_offset": 2,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967426,
+           "decl_line": 33
+          }
+         },
+         {
+          "name": "framing_err",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870928,
+          "size": 4,
+          "bit_offset": 3,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967427,
+           "decl_line": 34
+          }
+         },
+         {
+          "name": "overrun",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870928,
+          "size": 4,
+          "bit_offset": 4,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967428,
+           "decl_line": 35
+          }
+         },
+         {
+          "name": "reserved",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870928,
+          "size": 4,
+          "bit_offset": 5,
+          "bit_size": 27,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967429,
+           "decl_line": 36
+          }
+         }
+        ],
+        "extra": {
+         "decl_line": 37
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 48
+      }
+     },
+     {
+      "name": "tx_buf",
+      "type": "uint8_t[16]",
+      "kind": "array",
+      "offset": 12,
+      "address": 536870932,
+      "size": 16,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "[0]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 0,
+        "address": 536870932,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 0
+        }
+       },
+       {
+        "name": "[1]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 1,
+        "address": 536870933,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 1
+        }
+       },
+       {
+        "name": "[2]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 2,
+        "address": 536870934,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 2
+        }
+       },
+       {
+        "name": "[3]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 3,
+        "address": 536870935,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 3
+        }
+       },
+       {
+        "name": "[4]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 4,
+        "address": 536870936,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 4
+        }
+       },
+       {
+        "name": "[5]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 5,
+        "address": 536870937,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 5
+        }
+       },
+       {
+        "name": "[6]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 6,
+        "address": 536870938,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 6
+        }
+       },
+       {
+        "name": "[7]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 7,
+        "address": 536870939,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 7
+        }
+       },
+       {
+        "name": "[8]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 8,
+        "address": 536870940,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 8
+        }
+       },
+       {
+        "name": "[9]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 9,
+        "address": 536870941,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 9
+        }
+       },
+       {
+        "name": "[10]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 10,
+        "address": 536870942,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 10
+        }
+       },
+       {
+        "name": "[11]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 11,
+        "address": 536870943,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 11
+        }
+       },
+       {
+        "name": "[12]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 12,
+        "address": 536870944,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 12
+        }
+       },
+       {
+        "name": "[13]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 13,
+        "address": 536870945,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 13
+        }
+       },
+       {
+        "name": "[14]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 14,
+        "address": 536870946,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 14
+        }
+       },
+       {
+        "name": "[15]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 15,
+        "address": 536870947,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 15
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 49
+      }
+     },
+     {
+      "name": "pins",
+      "type": "gpio_cfg_t[3]",
+      "kind": "array",
+      "offset": 28,
+      "address": 536870948,
+      "size": 12,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "[0]",
+        "type": "gpio_cfg_t",
+        "kind": "element",
+        "offset": 0,
+        "address": 536870948,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "pin",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 0,
+          "address": 536870948,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 13
+          }
+         },
+         {
+          "name": "mode",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 1,
+          "address": 536870949,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 14
+          }
+         },
+         {
+          "name": "speed",
+          "type": "uint16_t",
+          "kind": "base",
+          "offset": 2,
+          "address": 536870950,
+          "size": 2,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 15
+          }
+         }
+        ],
+        "extra": {
+         "index": 0
+        }
+       },
+       {
+        "name": "[1]",
+        "type": "gpio_cfg_t",
+        "kind": "element",
+        "offset": 4,
+        "address": 536870952,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "pin",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 0,
+          "address": 536870952,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 13
+          }
+         },
+         {
+          "name": "mode",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 1,
+          "address": 536870953,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 14
+          }
+         },
+         {
+          "name": "speed",
+          "type": "uint16_t",
+          "kind": "base",
+          "offset": 2,
+          "address": 536870954,
+          "size": 2,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 15
+          }
+         }
+        ],
+        "extra": {
+         "index": 1
+        }
+       },
+       {
+        "name": "[2]",
+        "type": "gpio_cfg_t",
+        "kind": "element",
+        "offset": 8,
+        "address": 536870956,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "pin",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 0,
+          "address": 536870956,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 13
+          }
+         },
+         {
+          "name": "mode",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 1,
+          "address": 536870957,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 14
+          }
+         },
+         {
+          "name": "speed",
+          "type": "uint16_t",
+          "kind": "base",
+          "offset": 2,
+          "address": 536870958,
+          "size": 2,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 15
+          }
+         }
+        ],
+        "extra": {
+         "index": 2
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 50
+      }
+     },
+     {
+      "name": "mode",
+      "type": "work_mode_t",
+      "kind": "enum",
+      "offset": 40,
+      "address": 536870960,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "enum_values": [
+        [
+         "MODE_IDLE",
+         0
+        ],
+        [
+         "MODE_RUN",
+         1
+        ],
+        [
+         "MODE_FAULT",
+         255
+        ]
+       ],
+       "decl_line": 51
+      }
+     },
+     {
+      "name": "user_ctx",
+      "type": "void *",
+      "kind": "pointer",
+      "offset": 44,
+      "address": 536870964,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "pointer_target": "void",
+       "decl_line": 52
+      }
+     },
+     {
+      "name": "next",
+      "type": "node_t *",
+      "kind": "pointer",
+      "offset": 48,
+      "address": 536870968,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "pointer_target": "node_t",
+       "pointer_target_size": 8,
+       "decl_line": 53
+      }
+     }
+    ],
+    "extra": {
+     "canonical_type": "uart_handle_t",
+     "typedef_chain": "uart_handle_t",
+     "decl_line": 56
+    }
+   }
+  },
+  {
+   "name": "g_uart2",
+   "type": "uart_handle_t",
+   "address": 536870972,
+   "size": 52,
+   "section": ".bss",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_uart2",
+    "type": "uart_handle_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536870972,
+    "size": 52,
+    "bit_offset": null,
+    "bit_size": null,
+    "children": [
+     {
+      "name": "CR1",
+      "type": "vu32",
+      "kind": "base",
+      "offset": 0,
+      "address": 536870972,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "decl_line": 46
+      }
+     },
+     {
+      "name": "CR1_BITS",
+      "type": "uart_ctrl_bits_t",
+      "kind": "struct",
+      "offset": 4,
+      "address": 536870976,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "enable",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870976,
+        "size": 4,
+        "bit_offset": 0,
+        "bit_size": 1,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967808,
+         "decl_line": 20
+        }
+       },
+       {
+        "name": "irq_priority",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870976,
+        "size": 4,
+        "bit_offset": 1,
+        "bit_size": 3,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967809,
+         "decl_line": 21
+        }
+       },
+       {
+        "name": "dma_en",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870976,
+        "size": 4,
+        "bit_offset": 4,
+        "bit_size": 1,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967812,
+         "decl_line": 22
+        }
+       },
+       {
+        "name": "reserved",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870976,
+        "size": 4,
+        "bit_offset": 5,
+        "bit_size": 11,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967813,
+         "decl_line": 23
+        }
+       },
+       {
+        "name": "baud_prescaler",
+        "type": "uint32_t",
+        "kind": "bitfield",
+        "offset": 0,
+        "address": 536870976,
+        "size": 4,
+        "bit_offset": 16,
+        "bit_size": 16,
+        "extra": {
+         "bit_container": "uint32_t",
+         "abs_bit": 4294967824,
+         "decl_line": 24
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 47
+      }
+     },
+     {
+      "name": "SR",
+      "type": "uart_status_u",
+      "kind": "union",
+      "offset": 8,
+      "address": 536870980,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "all",
+        "type": "uint32_t",
+        "kind": "base",
+        "offset": 0,
+        "address": 536870980,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "decl_line": 29
+        }
+       },
+       {
+        "name": "bits",
+        "type": "<anonymous struct>",
+        "kind": "struct",
+        "offset": 0,
+        "address": 536870980,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "tx_empty",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870980,
+          "size": 4,
+          "bit_offset": 0,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967840,
+           "decl_line": 31
+          }
+         },
+         {
+          "name": "rx_full",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870980,
+          "size": 4,
+          "bit_offset": 1,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967841,
+           "decl_line": 32
+          }
+         },
+         {
+          "name": "parity_err",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870980,
+          "size": 4,
+          "bit_offset": 2,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967842,
+           "decl_line": 33
+          }
+         },
+         {
+          "name": "framing_err",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870980,
+          "size": 4,
+          "bit_offset": 3,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967843,
+           "decl_line": 34
+          }
+         },
+         {
+          "name": "overrun",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870980,
+          "size": 4,
+          "bit_offset": 4,
+          "bit_size": 1,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967844,
+           "decl_line": 35
+          }
+         },
+         {
+          "name": "reserved",
+          "type": "uint32_t",
+          "kind": "bitfield",
+          "offset": 0,
+          "address": 536870980,
+          "size": 4,
+          "bit_offset": 5,
+          "bit_size": 27,
+          "extra": {
+           "bit_container": "uint32_t",
+           "abs_bit": 4294967845,
+           "decl_line": 36
+          }
+         }
+        ],
+        "extra": {
+         "decl_line": 37
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 48
+      }
+     },
+     {
+      "name": "tx_buf",
+      "type": "uint8_t[16]",
+      "kind": "array",
+      "offset": 12,
+      "address": 536870984,
+      "size": 16,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "[0]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 0,
+        "address": 536870984,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 0
+        }
+       },
+       {
+        "name": "[1]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 1,
+        "address": 536870985,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 1
+        }
+       },
+       {
+        "name": "[2]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 2,
+        "address": 536870986,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 2
+        }
+       },
+       {
+        "name": "[3]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 3,
+        "address": 536870987,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 3
+        }
+       },
+       {
+        "name": "[4]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 4,
+        "address": 536870988,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 4
+        }
+       },
+       {
+        "name": "[5]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 5,
+        "address": 536870989,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 5
+        }
+       },
+       {
+        "name": "[6]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 6,
+        "address": 536870990,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 6
+        }
+       },
+       {
+        "name": "[7]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 7,
+        "address": 536870991,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 7
+        }
+       },
+       {
+        "name": "[8]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 8,
+        "address": 536870992,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 8
+        }
+       },
+       {
+        "name": "[9]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 9,
+        "address": 536870993,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 9
+        }
+       },
+       {
+        "name": "[10]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 10,
+        "address": 536870994,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 10
+        }
+       },
+       {
+        "name": "[11]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 11,
+        "address": 536870995,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 11
+        }
+       },
+       {
+        "name": "[12]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 12,
+        "address": 536870996,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 12
+        }
+       },
+       {
+        "name": "[13]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 13,
+        "address": 536870997,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 13
+        }
+       },
+       {
+        "name": "[14]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 14,
+        "address": 536870998,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 14
+        }
+       },
+       {
+        "name": "[15]",
+        "type": "uint8_t",
+        "kind": "element",
+        "offset": 15,
+        "address": 536870999,
+        "size": 1,
+        "bit_offset": null,
+        "bit_size": null,
+        "extra": {
+         "index": 15
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 49
+      }
+     },
+     {
+      "name": "pins",
+      "type": "gpio_cfg_t[3]",
+      "kind": "array",
+      "offset": 28,
+      "address": 536871000,
+      "size": 12,
+      "bit_offset": null,
+      "bit_size": null,
+      "children": [
+       {
+        "name": "[0]",
+        "type": "gpio_cfg_t",
+        "kind": "element",
+        "offset": 0,
+        "address": 536871000,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "pin",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 0,
+          "address": 536871000,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 13
+          }
+         },
+         {
+          "name": "mode",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 1,
+          "address": 536871001,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 14
+          }
+         },
+         {
+          "name": "speed",
+          "type": "uint16_t",
+          "kind": "base",
+          "offset": 2,
+          "address": 536871002,
+          "size": 2,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 15
+          }
+         }
+        ],
+        "extra": {
+         "index": 0
+        }
+       },
+       {
+        "name": "[1]",
+        "type": "gpio_cfg_t",
+        "kind": "element",
+        "offset": 4,
+        "address": 536871004,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "pin",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 0,
+          "address": 536871004,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 13
+          }
+         },
+         {
+          "name": "mode",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 1,
+          "address": 536871005,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 14
+          }
+         },
+         {
+          "name": "speed",
+          "type": "uint16_t",
+          "kind": "base",
+          "offset": 2,
+          "address": 536871006,
+          "size": 2,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 15
+          }
+         }
+        ],
+        "extra": {
+         "index": 1
+        }
+       },
+       {
+        "name": "[2]",
+        "type": "gpio_cfg_t",
+        "kind": "element",
+        "offset": 8,
+        "address": 536871008,
+        "size": 4,
+        "bit_offset": null,
+        "bit_size": null,
+        "children": [
+         {
+          "name": "pin",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 0,
+          "address": 536871008,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 13
+          }
+         },
+         {
+          "name": "mode",
+          "type": "uint8_t",
+          "kind": "base",
+          "offset": 1,
+          "address": 536871009,
+          "size": 1,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 14
+          }
+         },
+         {
+          "name": "speed",
+          "type": "uint16_t",
+          "kind": "base",
+          "offset": 2,
+          "address": 536871010,
+          "size": 2,
+          "bit_offset": null,
+          "bit_size": null,
+          "extra": {
+           "decl_line": 15
+          }
+         }
+        ],
+        "extra": {
+         "index": 2
+        }
+       }
+      ],
+      "extra": {
+       "decl_line": 50
+      }
+     },
+     {
+      "name": "mode",
+      "type": "work_mode_t",
+      "kind": "enum",
+      "offset": 40,
+      "address": 536871012,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "enum_values": [
+        [
+         "MODE_IDLE",
+         0
+        ],
+        [
+         "MODE_RUN",
+         1
+        ],
+        [
+         "MODE_FAULT",
+         255
+        ]
+       ],
+       "decl_line": 51
+      }
+     },
+     {
+      "name": "user_ctx",
+      "type": "void *",
+      "kind": "pointer",
+      "offset": 44,
+      "address": 536871016,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "pointer_target": "void",
+       "decl_line": 52
+      }
+     },
+     {
+      "name": "next",
+      "type": "node_t *",
+      "kind": "pointer",
+      "offset": 48,
+      "address": 536871020,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "pointer_target": "node_t",
+       "pointer_target_size": 8,
+       "decl_line": 53
+      }
+     }
+    ],
+    "extra": {
+     "canonical_type": "uart_handle_t",
+     "typedef_chain": "uart_handle_t",
+     "decl_line": 57
+    }
+   }
+  },
+  {
+   "name": "g_dma_buffer",
+   "type": "uint8_t[64]",
+   "address": 536871024,
+   "size": 64,
+   "section": ".bss",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_dma_buffer",
+    "type": "uint8_t[64]",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536871024,
+    "size": 64,
+    "bit_offset": null,
+    "bit_size": null,
+    "children": [
+     {
+      "name": "[0]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 0,
+      "address": 536871024,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 0
+      }
+     },
+     {
+      "name": "[1]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 1,
+      "address": 536871025,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 1
+      }
+     },
+     {
+      "name": "[2]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 2,
+      "address": 536871026,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 2
+      }
+     },
+     {
+      "name": "[3]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 3,
+      "address": 536871027,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 3
+      }
+     },
+     {
+      "name": "[4]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 4,
+      "address": 536871028,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 4
+      }
+     },
+     {
+      "name": "[5]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 5,
+      "address": 536871029,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 5
+      }
+     },
+     {
+      "name": "[6]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 6,
+      "address": 536871030,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 6
+      }
+     },
+     {
+      "name": "[7]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 7,
+      "address": 536871031,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 7
+      }
+     },
+     {
+      "name": "[8]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 8,
+      "address": 536871032,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 8
+      }
+     },
+     {
+      "name": "[9]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 9,
+      "address": 536871033,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 9
+      }
+     },
+     {
+      "name": "[10]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 10,
+      "address": 536871034,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 10
+      }
+     },
+     {
+      "name": "[11]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 11,
+      "address": 536871035,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 11
+      }
+     },
+     {
+      "name": "[12]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 12,
+      "address": 536871036,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 12
+      }
+     },
+     {
+      "name": "[13]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 13,
+      "address": 536871037,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 13
+      }
+     },
+     {
+      "name": "[14]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 14,
+      "address": 536871038,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 14
+      }
+     },
+     {
+      "name": "[15]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 15,
+      "address": 536871039,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 15
+      }
+     },
+     {
+      "name": "[16]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 16,
+      "address": 536871040,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 16
+      }
+     },
+     {
+      "name": "[17]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 17,
+      "address": 536871041,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 17
+      }
+     },
+     {
+      "name": "[18]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 18,
+      "address": 536871042,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 18
+      }
+     },
+     {
+      "name": "[19]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 19,
+      "address": 536871043,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 19
+      }
+     },
+     {
+      "name": "[20]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 20,
+      "address": 536871044,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 20
+      }
+     },
+     {
+      "name": "[21]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 21,
+      "address": 536871045,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 21
+      }
+     },
+     {
+      "name": "[22]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 22,
+      "address": 536871046,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 22
+      }
+     },
+     {
+      "name": "[23]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 23,
+      "address": 536871047,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 23
+      }
+     },
+     {
+      "name": "[24]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 24,
+      "address": 536871048,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 24
+      }
+     },
+     {
+      "name": "[25]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 25,
+      "address": 536871049,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 25
+      }
+     },
+     {
+      "name": "[26]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 26,
+      "address": 536871050,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 26
+      }
+     },
+     {
+      "name": "[27]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 27,
+      "address": 536871051,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 27
+      }
+     },
+     {
+      "name": "[28]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 28,
+      "address": 536871052,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 28
+      }
+     },
+     {
+      "name": "[29]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 29,
+      "address": 536871053,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 29
+      }
+     },
+     {
+      "name": "[30]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 30,
+      "address": 536871054,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 30
+      }
+     },
+     {
+      "name": "[31]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 31,
+      "address": 536871055,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 31
+      }
+     },
+     {
+      "name": "[32]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 32,
+      "address": 536871056,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 32
+      }
+     },
+     {
+      "name": "[33]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 33,
+      "address": 536871057,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 33
+      }
+     },
+     {
+      "name": "[34]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 34,
+      "address": 536871058,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 34
+      }
+     },
+     {
+      "name": "[35]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 35,
+      "address": 536871059,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 35
+      }
+     },
+     {
+      "name": "[36]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 36,
+      "address": 536871060,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 36
+      }
+     },
+     {
+      "name": "[37]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 37,
+      "address": 536871061,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 37
+      }
+     },
+     {
+      "name": "[38]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 38,
+      "address": 536871062,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 38
+      }
+     },
+     {
+      "name": "[39]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 39,
+      "address": 536871063,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 39
+      }
+     },
+     {
+      "name": "[40]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 40,
+      "address": 536871064,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 40
+      }
+     },
+     {
+      "name": "[41]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 41,
+      "address": 536871065,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 41
+      }
+     },
+     {
+      "name": "[42]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 42,
+      "address": 536871066,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 42
+      }
+     },
+     {
+      "name": "[43]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 43,
+      "address": 536871067,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 43
+      }
+     },
+     {
+      "name": "[44]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 44,
+      "address": 536871068,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 44
+      }
+     },
+     {
+      "name": "[45]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 45,
+      "address": 536871069,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 45
+      }
+     },
+     {
+      "name": "[46]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 46,
+      "address": 536871070,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 46
+      }
+     },
+     {
+      "name": "[47]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 47,
+      "address": 536871071,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 47
+      }
+     },
+     {
+      "name": "[48]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 48,
+      "address": 536871072,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 48
+      }
+     },
+     {
+      "name": "[49]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 49,
+      "address": 536871073,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 49
+      }
+     },
+     {
+      "name": "[50]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 50,
+      "address": 536871074,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 50
+      }
+     },
+     {
+      "name": "[51]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 51,
+      "address": 536871075,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 51
+      }
+     },
+     {
+      "name": "[52]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 52,
+      "address": 536871076,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 52
+      }
+     },
+     {
+      "name": "[53]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 53,
+      "address": 536871077,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 53
+      }
+     },
+     {
+      "name": "[54]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 54,
+      "address": 536871078,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 54
+      }
+     },
+     {
+      "name": "[55]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 55,
+      "address": 536871079,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 55
+      }
+     },
+     {
+      "name": "[56]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 56,
+      "address": 536871080,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 56
+      }
+     },
+     {
+      "name": "[57]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 57,
+      "address": 536871081,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 57
+      }
+     },
+     {
+      "name": "[58]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 58,
+      "address": 536871082,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 58
+      }
+     },
+     {
+      "name": "[59]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 59,
+      "address": 536871083,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 59
+      }
+     },
+     {
+      "name": "[60]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 60,
+      "address": 536871084,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 60
+      }
+     },
+     {
+      "name": "[61]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 61,
+      "address": 536871085,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 61
+      }
+     },
+     {
+      "name": "[62]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 62,
+      "address": 536871086,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 62
+      }
+     },
+     {
+      "name": "[63]",
+      "type": "uint8_t",
+      "kind": "element",
+      "offset": 63,
+      "address": 536871087,
+      "size": 1,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "index": 63
+      }
+     }
+    ],
+    "extra": {
+     "canonical_type": "uint8_t[64]",
+     "array_dims": "[64]",
+     "decl_line": 59
+    }
+   }
+  },
+  {
+   "name": "g_head",
+   "type": "node_t",
+   "address": 536871088,
+   "size": 8,
+   "section": ".bss",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_head",
+    "type": "node_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536871088,
+    "size": 8,
+    "bit_offset": null,
+    "bit_size": null,
+    "children": [
+     {
+      "name": "id",
+      "type": "uint32_t",
+      "kind": "base",
+      "offset": 0,
+      "address": 536871088,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "decl_line": 41
+      }
+     },
+     {
+      "name": "next",
+      "type": "node_s *",
+      "kind": "pointer",
+      "offset": 4,
+      "address": 536871092,
+      "size": 4,
+      "bit_offset": null,
+      "bit_size": null,
+      "extra": {
+       "pointer_target": "node_s",
+       "pointer_target_size": 8,
+       "decl_line": 42
+      }
+     }
+    ],
+    "extra": {
+     "canonical_type": "node_t",
+     "typedef_chain": "node_t",
+     "decl_line": 62
+    }
+   }
+  },
+  {
+   "name": "g_flags",
+   "type": "uint16_t",
+   "address": 536871096,
+   "size": 2,
+   "section": ".bss",
+   "linkage": "global",
+   "scope": "",
+   "tree": {
+    "name": "g_flags",
+    "type": "uint16_t",
+    "kind": "variable",
+    "offset": 0,
+    "address": 536871096,
+    "size": 2,
+    "bit_offset": null,
+    "bit_size": null,
+    "extra": {
+     "canonical_type": "uint16_t",
+     "typedef_chain": "uint16_t",
+     "decl_line": 63
+    }
+   }
+  }
+ ]
+}
